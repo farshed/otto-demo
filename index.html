@@ -20,8 +20,8 @@
 	<body>
 		<div id="wrapper">
 			<video
-				id="vid"
 				autoplay
+				id="vid"
 				muted
 				loop
 				style="position: relative; z-index: 1; height: 710px; width: 350px; border-radius: 40px"
@@ -34,8 +34,13 @@
 			<img
 				src="./frame.png"
 				alt="Frame"
-				style="border-radius: 30px; position: absolute; z-index: 5"
+				style="border-radius: 30px; position: absolute; z-index: 5; pointer-events: none"
 			/>
 		</div>
 	</body>
+	<script>
+		document.getElementById('vid').addEventListener('contextmenu', (e) => {
+			e.preventDefault();
+		});
+	</script>
 </html>
